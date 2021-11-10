@@ -1,7 +1,7 @@
    /* THIS IS THE COMPONENT FOR THE NAVBAR: */
 
     import React from 'react'; //Keyboard VS Code Shortcut: rafce
-    import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks } from './NavbarStyles.js';
+    import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink } from './NavbarStyles.js';
     import {FaBars} from 'react-icons/fa';
     import { navData } from '../../../utils/seed';
 
@@ -29,6 +29,13 @@
                             })}
                             
                         </NavMenu>
+
+                        <NavBtn>
+                            <NavBtnLink to="/signin">
+                                Sign In
+                            </NavBtnLink>
+                        </NavBtn>
+
                     </NavbarContainer>
 
                 </Nav>
