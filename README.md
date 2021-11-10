@@ -103,3 +103,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### `npm i styled-components`
 
 (https://styled-components.com/docs/basics#getting-started)
+
+### `npm i react-scroll`
+
+- React component for animating vertical scrolling
+- (https://www.npmjs.com/package/react-scroll)

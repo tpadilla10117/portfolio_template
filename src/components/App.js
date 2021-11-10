@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Navbar} from './utils';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 
@@ -10,9 +11,10 @@ function App() {
 
   return (
     <div className="app">
-
-      <Navbar />
-      
+      <Router>
+        <Navbar />
+      </Router>
+  
     </div>
   );
 }
