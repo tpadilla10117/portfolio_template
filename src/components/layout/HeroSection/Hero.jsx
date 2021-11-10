@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import { HeroContainer, HeroBackground, VideoBackground, HeroContent, HeroH1, HeroP, HeroBtnWrapper, Button, ArrowForward, ArrowRight} from './HeroStyles';
+import { HeroContainer, HeroBackground, VideoBackground, HeroContent, HeroH1, HeroP, HeroBtnWrapper, ArrowForward, ArrowRight} from './HeroStyles';
+import {Button} from '../Button/Button.Styles';
 import Video from '../../../assets/videos/water.mp4'
 
 const Hero = () => {
@@ -24,9 +25,9 @@ const Hero = () => {
                     Create a portfolio today, establish your brand pressence, and get your business going!
                 </HeroP>
                 <HeroBtnWrapper>
-                    {/* <Button to="signup" onMouseEnter={onHover} onMouseLeave={onHover}>
+                    <Button to="signup" onMouseEnter={onHover} onMouseLeave={onHover}>
                         Get started {hover ? <ArrowForward /> : <ArrowRight/> }
-                    </Button> */}
+                    </Button>
                 </HeroBtnWrapper>
             </HeroContent>
         </HeroContainer>
