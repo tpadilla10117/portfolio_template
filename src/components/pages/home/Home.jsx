@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { homeObjOne } from '../../../utils/seed';
 import { Navbar, Sidebar, Hero, InfoSection } from '../../utils';
 
 const Home = () => {
@@ -16,7 +17,7 @@ const Home = () => {
             <Sidebar isOpen={isOpen} toggle={toggle} />
             <Navbar toggle={toggle} />
             <Hero />
-            <InfoSection />
+            <InfoSection {...homeObjOne} />
         </>
     );
 };
