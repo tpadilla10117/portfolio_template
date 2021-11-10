@@ -5,7 +5,7 @@
     import {FaBars} from 'react-icons/fa';
     import { navData } from '../../../utils/seed';
 
-    const Navbar = () => {
+    const Navbar = ( {toggle, isOpen } ) => {
         return (
             <>
                 <Nav>
@@ -13,7 +13,7 @@
                         <NavLogo to='/'>
                             Template
                         </NavLogo>
-                        <MobileIcon>
+                        <MobileIcon onClick={toggle}>
                             <FaBars />
                         </MobileIcon>
                         <NavMenu>
