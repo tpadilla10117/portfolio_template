@@ -2,6 +2,8 @@
 
     import React from 'react'; //Keyboard VS Code Shortcut: rafce
     import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks } from './NavbarStyles.js';
+    import {FaBars} from 'react-icons/fa';
+    import { navData } from '../../../utils/seed';
 
     const Navbar = () => {
         return (
@@ -12,14 +14,20 @@
                             Template
                         </NavLogo>
                         <MobileIcon>
-                            {/* <FaBars /> */}
+                            <FaBars />
                         </MobileIcon>
                         <NavMenu>
-                            <NavItem>
-                                <NavLinks to="about">
 
-                                </NavLinks>
-                            </NavItem>
+                            {navData.map( (data) => {
+                                return (
+                                    <NavItem key={data.id}>
+                                        <NavLinks to={data.path}>
+                                            {data.title}
+                                        </NavLinks>
+                                    </NavItem>
+                                )
+                            })}
+                            
                         </NavMenu>
                     </NavbarContainer>
 
