@@ -9,6 +9,8 @@ import {
     ServicesP
 } from './ServicesStyles';
 
+import Icon1 from '../../../assets/images/designerlife.svg';
+
 const Services = () => {
     return (
         <ServicesContainer id='services'>
