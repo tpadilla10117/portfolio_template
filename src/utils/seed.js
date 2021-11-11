@@ -60,7 +60,7 @@
         headline: 'Unlimited templating at a low cost',
         description: 'Get access to our templates that allow you to create sites at a relatively fast pace.',
         buttonLabel: 'Get started',
-        imgStart: false,
+        imgStart: true,
         img: `${DesignerLife}`,
         alt: 'Designer',
         dark: false,
