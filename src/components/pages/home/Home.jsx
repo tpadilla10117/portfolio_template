@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { homeObjOne, homeObjTwo, homeObjThree } from '../../../utils/seed';
-import { Navbar, Sidebar, Hero, InfoSection } from '../../utils';
+import { Navbar, Sidebar, Hero, InfoSection, Services } from '../../utils';
 
 const Home = () => {
 
@@ -19,6 +19,7 @@ const Home = () => {
             <Hero />
             <InfoSection {...homeObjOne} />
             <InfoSection {...homeObjTwo} />
+            <Services />
             <InfoSection {...homeObjThree} />
         </>
     );
