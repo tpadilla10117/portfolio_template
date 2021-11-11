@@ -14,6 +14,7 @@ import {
     Img
 } from './InfoSectionStyles';
 import {Button} from '../Button/Button.Styles';
+import Designer from '../../../assets/images/designerlife.svg';
 
 /* InfoSection receives data from seed.js : */
 
@@ -35,6 +36,7 @@ const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, dark
                                     {description}
                                 </Subtitle>
                                 <BtnWrap>
+                                    {/* TODO: Review React-scroll properties nested in this component:*/}
                                     <Button to='home'
                                         smooth={true}
                                         duration={500}
