@@ -14,7 +14,6 @@ import {
     Img
 } from './InfoSectionStyles';
 import {Button} from '../Button/Button.Styles';
-import Designer from '../../../assets/images/designerlife.svg';
 
 /* InfoSection receives data from seed.js : */
 

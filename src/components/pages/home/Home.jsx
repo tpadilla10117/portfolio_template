@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { homeObjOne } from '../../../utils/seed';
+import { homeObjOne, homeObjTwo, homeObjThree } from '../../../utils/seed';
 import { Navbar, Sidebar, Hero, InfoSection } from '../../utils';
 
 const Home = () => {
@@ -18,6 +18,8 @@ const Home = () => {
             <Navbar toggle={toggle} />
             <Hero />
             <InfoSection {...homeObjOne} />
+            <InfoSection {...homeObjTwo} />
+            <InfoSection {...homeObjThree} />
         </>
     );
 };
