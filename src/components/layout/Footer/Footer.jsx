@@ -16,7 +16,16 @@ import {
     SocialIconLink,
  } from './FooterStyles';
 
+ import { animateScroll as scroll } from 'react-scroll';
+
 function Footer() {
+
+    /* Toggle function to scroll to top of application: */
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    };
+
+
     return (
         <FooterContainer>
             <FooterWrapper>
@@ -109,11 +118,12 @@ function Footer() {
 
                 <SocialMedia>
                     <SocialMediaWrap>
-                        <SocialLogo to='/'>
+                        <SocialLogo to='/' onClick={toggleHome}>
                             Template
                         </SocialLogo>
-                        <WebsiteRights>T.Templater {new Date().getFullYear() } All rights reserved.</WebsiteRights>
+                        <WebsiteRights>T.Templater © {new Date().getFullYear() } All rights reserved.</WebsiteRights>
                         <SocialIcons>
+                        {/* TODO: These will have to be <a> tags to link to external sites: */}
                             <SocialIconLink href="/" target="_blank" aria-label="Facebook">
                                 <FaFacebook />
                             </SocialIconLink>

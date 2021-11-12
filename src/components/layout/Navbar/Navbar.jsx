@@ -24,6 +24,7 @@
             window.addEventListener('scroll', changeNav)
         }, []);
 
+    /* Toggle function to scroll to top of application: */
         const toggleHome = () => {
             scroll.scrollToTop();
         };
