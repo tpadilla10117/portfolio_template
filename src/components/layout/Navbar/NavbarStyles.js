@@ -84,7 +84,7 @@ export const NavLinks = styled(LinkScroll)`
     cursor: pointer;
 
     &.active {
-        border-bottom: 3px solid #01bf71;
+        border-bottom: 3px solid var(--sec-bg-color);
     }
 
 `
@@ -97,9 +97,10 @@ export const NavBtn = styled.nav`
     }
 `
 
+/* Nav 'Sign In' Button: */
 export const NavBtnLink = styled(LinkReactRouter)`
     border-radius: 50px;
-    background: #01bf71;
+    background: var(--sec-bg-color);
     white-space: nowrap;
     padding: 10px 22px;
     color: #010606;
