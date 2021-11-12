@@ -83,6 +83,7 @@ export const NavLinks = styled(LinkScroll)`
     height: 100%;
     cursor: pointer;
 
+/* Where the styling for the navbar bottom border happens: */
     &.active {
         border-bottom: 3px solid var(--sec-bg-color);
     }

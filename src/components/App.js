@@ -13,6 +13,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" component={Home} exact />
+        {/* TODO: Meant to be a page to login / create an account: */}
           <Route path="/signin" component={SigninPage} exact/>
         </Switch>
       </Router>

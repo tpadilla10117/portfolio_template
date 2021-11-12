@@ -13,7 +13,7 @@ export const SidebarContainer = styled.aside`
     align-items: center;
     top: 0;
     left: 0;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; /* Logic that pairs with the toggle in Home.jsx: */
     opacity: ${ ({ isOpen }) => (isOpen ? '100%' : '0') } ;
     top: ${ ( {isOpen}) => (isOpen ? '0' : '-100%') };
 `
@@ -43,7 +43,7 @@ export const SidebarMenu = styled.ul`
     text-align: center;
 
     @media screen and (max-width: 480px ) {
-        grid-template-rows: repeat()(6, 60px);
+        grid-template-rows: repeat(6, 60px);
     }
 `
 
@@ -59,7 +59,7 @@ export const SidebarLink = styled(LinkScroll)`
     cursor: pointer;
 
     &:hover {
-        color: #01bf71;
+        color: var(--sec-bg-color);
         transition: 0.2s ease-in-out;
     }
 `
@@ -72,7 +72,7 @@ export const SidebarBtnWrap = styled.div`
 
 export const SidebarRoute = styled(LinkReactRouter)`
     border-radius: 50px;
-    background: #01bf71;
+    background: var(--sec-bg-color);
     white-space: nowrap;
     padding: 16px 64px;
     color: #010606;

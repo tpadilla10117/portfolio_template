@@ -6,7 +6,7 @@
     import { navData } from '../../../utils/seed';
     import { animateScroll as scroll } from 'react-scroll';
 
-    const Navbar = ( {toggle, isOpen } ) => {
+    const Navbar = ( {toggle} ) => {
 
     /* State for... */
         const [ scrollNav, setScrollNav ] = useState(false);
