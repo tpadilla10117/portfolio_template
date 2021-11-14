@@ -7,3 +7,9 @@ export const CarouselWrapper = styled.section`
     justify-content: center;
     /* align-items: center; */ /* this is making white space appear */
 `
+
+export const CarouselImg = styled.img`
+    width: 1000px;
+    height: 600px;
+    border-radius: 10px;
+`

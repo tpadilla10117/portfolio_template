@@ -2,8 +2,10 @@ import React, {useState} from 'react';
 import { carouselData } from '../../../utils/seed';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 import { 
-    CarouselWrapper
+    CarouselWrapper,
+    CarouselImg
 } from './CarouselStyles';
+import './Carousel.css';
 
 const Carousel = ( {slides} ) => {
 
@@ -16,7 +18,7 @@ const Carousel = ( {slides} ) => {
             <FaArrowAltCircleRight className="right-arrow"/>
             {carouselData.map( (slide, index) => {
                 return (
-                    <img src={slide.image} alt="travel" key={index} className='slider-image' />
+                    <CarouselImg src={slide.image} alt="travel" key={index} className='slider-image' />
                 )
             })}
             
