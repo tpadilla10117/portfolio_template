@@ -1,8 +1,8 @@
 .right-arrow {
     position: absolute;
     top: 50%;
-    right: 32px;
-    font-size: 3rem;
+    right: 1px;
+    font-size: 1.1rem;
     color: #000;
     z-index: 10;
     cursor: pointer;
@@ -12,8 +12,8 @@
 .left-arrow {
     position: absolute;
     top: 50%;
-    left: 32px;
-    font-size: 3rem;
+    left: 1px;
+    font-size: 1.1rem;
     color: #000;
     z-index: 10;
     cursor: pointer;
@@ -29,4 +29,13 @@
     opacity: 1;
     transition-duration: 1s;
     transform: scale(1.08);
+}
+
+.indicator {
+    transition-duration: 1s ease;
+}
+
+.indicator.active {
+    background: rgba(0, 0, 0,.75);
+    transition-duration: 1s;
 }

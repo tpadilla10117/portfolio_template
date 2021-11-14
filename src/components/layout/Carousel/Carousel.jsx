@@ -1,10 +1,13 @@
 import React, {useState} from 'react';
-import { carouselData } from '../../../utils/seed';
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+import { carouselData, carouselIndicatorData } from '../../../utils/seed';
+import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import { 
     CarouselWrapper,
     CarouselImgWrapper,
-    CarouselImg
+    CarouselImg,
+    CarouselNav,
+    /* CarouselBtn, */
+    CarouselBtnIndicator
 } from './CarouselStyles';
 import './Carousel.css';
 
@@ -30,8 +33,8 @@ const Carousel = ( {slides} ) => {
 
     return (
         <CarouselWrapper className="slider">
-            <FaArrowAltCircleLeft className="left-arrow" onClick={previousSlide}/>
-            <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide}/>
+            <FaArrowLeft className="left-arrow" onClick={previousSlide}/>
+            <FaArrowRight className="right-arrow" onClick={nextSlide}/>
             {carouselData.map( (slide, index) => {
                 return (
                     <CarouselImgWrapper className={index === current ? 'slide active' : 'slide'} key={index} >
@@ -41,6 +44,15 @@ const Carousel = ( {slides} ) => {
                     
                 )
             })}
+        {/* For the Indicator buttons below: */}
+            <CarouselNav>
+                {carouselIndicatorData.map( (slide, index) => {
+                    return (
+                        <CarouselBtnIndicator className={index === current ? 'indicator active' : 'indicator'} key={index} onClick={nextSlide}/>
+                    )
+                })}
+        
+            </CarouselNav>
             
         </CarouselWrapper>
     );
