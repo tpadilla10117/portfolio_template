@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import { homeObjOne, homeObjTwo, homeObjThree } from '../../../utils/seed';
-import { Navbar, Sidebar, Hero, InfoSection, Services, Footer } from '../../utils';
+import { homeObjOne, homeObjTwo, homeObjThree, carouselData } from '../../../utils/seed';
+import { Navbar, Sidebar, Hero, InfoSection, Services, Footer, Carousel } from '../../utils';
 
 const Home = () => {
 
@@ -20,6 +20,7 @@ const Home = () => {
             <InfoSection {...homeObjOne} />
             <InfoSection {...homeObjTwo} />
             <Services />
+            <Carousel slides={carouselData}/>
             <InfoSection {...homeObjThree} />
             <Footer />
         </>
