@@ -3,33 +3,42 @@ import styled from 'styled-components';
 export const CarouselWrapper = styled.section`
     display: flex;
     position: relative;
-    height: 100%;
+    height: 800px;
     width: 100%;
+    max-height: 100%;
+    max-width: 100%;
     justify-content: center;
+    align-items: center;
     /* align-items: center; */ /* this is making white space appear */
+    background: #fff;
+    
+    
 
 `
 /* TODO: Need to make carousel fully responsive: */
 
 export const CarouselImgWrapper = styled.div`
-    height: 100vh;
-    /* width: 100%; */
-    /* flex-direction: column; */
-    /* justify-content: flex-start; */
-    /* align-items: center; */
-    /* border-radius: 10px; */
-    /* max-height: 340px; */
-   /*  padding: 30px; */
+    max-height: 50%;
+    max-width: 80%;
+    height: 100%;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-
+    /* background-color: blue; */
+    position: absolute;
+    
 `
 
 export const CarouselImg = styled.img`
-    max-width: 80%;
-    width: 100%;
-    object-fit: contain;
+    display: flex;
+    margin: 0 auto;
+    max-width: 100%;
+    /* width: 100%; */
+    object-fit: cover;
     height: 400px;
     border-radius: 10px;
+    
     
 `
 

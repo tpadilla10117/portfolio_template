@@ -35,7 +35,7 @@ const Carousel = ( {slides} ) => {
             {carouselData.map( (slide, index) => {
                 return (
                     <CarouselImgWrapper className={index === current ? 'slide active' : 'slide'} key={index} >
-                        {index === current && (<CarouselImg src={slide.image} alt="travel" key={index} className='slider-image' />) }
+                        {index === current && (<CarouselImg src={slide.image} alt="travel" key={index} className='slider-image' />)}
                         
                     </CarouselImgWrapper>
                     
