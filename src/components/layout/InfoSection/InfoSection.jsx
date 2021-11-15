@@ -31,7 +31,7 @@ const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, dark
                                 <Heading lightText={lightText}>
                                     {headline}
                                 </Heading>
-                                <Subtitle darkText={darkText}>
+                                <Subtitle darkText={darkText} className="fade-in">
                                     {description}
                                 </Subtitle>
                                 <BtnWrap>

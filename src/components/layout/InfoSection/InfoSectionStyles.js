@@ -82,7 +82,25 @@ export const Subtitle = styled.p`
     font-size: 18px;
     line-height: 24px;
     color: ${ ( { darkText } ) => (darkText ? '#010606' : '#fff' ) };
+    animation-duration: 1s;
+    animation-name: slidein;
+
+    @keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 300%;
+        }
+      
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+    
 `
+
+
+   
 
 export const BtnWrap = styled.div`
     display: flex;
