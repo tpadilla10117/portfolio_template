@@ -33,6 +33,7 @@
 
 .indicator {
     transition-duration: 1s ease;
+    cursor: pointer;
 }
 
 .indicator.active {
