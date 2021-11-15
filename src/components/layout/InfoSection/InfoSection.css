@@ -1,10 +1,10 @@
 /* STRICTLY FOR ANIMATIONS / EFFECTS WHEN A USER SCROLLS: */ 
     /* TODO: Need to review Intersection Observers: */
-  /*   .fade-in {
+    .fade-in {
         opacity: 0;
         transition: opacity 250ms ease-in;
     }
 
     .fade-in.appear {
         opacity: 1;
-    } */
+    }

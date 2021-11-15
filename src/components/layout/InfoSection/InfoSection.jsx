@@ -30,14 +30,19 @@ const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, dark
         threshold: 1,
         rootMargin: "0px 0px -200px 0px"
     };
-
-  /*   useEffect( () => {
+    
+/* TODO: Need to figure out why the useEffect doesn't work properly with Intersection Observer */
+    useEffect( () => {
         faders.forEach(fader => {
             appearOnScroll.observe(fader);
             console.log("Fade fired")
 
+            return () => {
+                console.log("We unmounted: ", )
+            }
+
         })
-    }, []); */
+    }, );
 
    /*  useEffect( () => {
         const observer = new IntersectionObserver(callbackFunction, appearOptions);
@@ -49,13 +54,14 @@ const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, dark
     }, [containerRef, appearOptions]) */
 
 /* Intersection Observer: */
- /*    const appearOnScroll = new IntersectionObserver(
+    const appearOnScroll = new IntersectionObserver(
         function( entries, appearOnScroll) {
             entries.forEach( entry => {
                 if (!entry.isIntersecting) {
                     return;
                 } else {
                     entry.target.classList.add('appear');
+                    setIsVisible(entry.isIntersecting);
                     appearOnScroll.unobserve(entry.target);
                 }
             })
@@ -63,9 +69,11 @@ const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, dark
         
         appearOptions);
     
-        faders.forEach(fader => {
+        /* faders.forEach(fader => {
             appearOnScroll.observe(fader);
         }) */
+
+        
 
         const callbackFunction = (entries) => {
             const [ entry ] = entries;
@@ -85,7 +93,8 @@ const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, dark
                                 <Heading lightText={lightText}>
                                     {headline}
                                 </Heading>
-                                <Subtitle darkText={darkText} className="fade-in" /* ref={containerRef} */>
+                                <Subtitle darkText={darkText} className="fade-in" ref={containerRef}>
+                                    {/* {isVisible ? description : "This didn't work"} */}
                                     {description}
                                 </Subtitle>
                                 <BtnWrap>
