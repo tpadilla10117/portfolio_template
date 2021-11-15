@@ -21,8 +21,8 @@ import {Button} from '../Button/Button.Styles';
 const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, darkText, description, buttonLabel, img, alt, primary, dark, dark2 } ) => {
 
 /* TODO: THis is all logic for making info appear on scroll: */
-    const faders = document.querySelectorAll('.fade-in');
-    const [ isVisible, setIsVisible ] = useState(false);
+    /* const faders = document.querySelectorAll('.fade-in'); */
+    /* const [ isVisible, setIsVisible ] = useState(false); */
     const containerRef = useRef(null);
 
 /*  "Options" argument for intersection observer:*/
@@ -30,55 +30,39 @@ const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, dark
         threshold: 1,
         rootMargin: "0px 0px -200px 0px"
     };
+
+/* Intersection Observer: */
+
+
+    /* faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    }) */
     
 /* TODO: Need to figure out why the useEffect doesn't work properly with Intersection Observer */
     useEffect( () => {
-        faders.forEach(fader => {
-            appearOnScroll.observe(fader);
-            console.log("Fade fired")
 
-            return () => {
-                console.log("We unmounted: ", )
-            }
+        const appearOnScroll = new IntersectionObserver(
+            function( entries, appearOnScroll) {
+                entries.forEach( entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('appear');
+                        /* appearOnScroll.unobserve(entry.target); */
+                    }
+                })
+            },
+            
+            appearOptions);
 
-        })
-    }, );
-
-   /*  useEffect( () => {
-        const observer = new IntersectionObserver(callbackFunction, appearOptions);
-        if (containerRef.current) observer.observe(containerRef.current);
+        if (containerRef.current) appearOnScroll.observe(containerRef.current);
 
         return () => {
-            if(containerRef.current) observer.unobserve(containerRef.current);
+            if(containerRef.current) appearOnScroll.unobserve(containerRef.current);
         }
-    }, [containerRef, appearOptions]) */
-
-/* Intersection Observer: */
-    const appearOnScroll = new IntersectionObserver(
-        function( entries, appearOnScroll) {
-            entries.forEach( entry => {
-                if (!entry.isIntersecting) {
-                    return;
-                } else {
-                    entry.target.classList.add('appear');
-                    setIsVisible(entry.isIntersecting);
-                    appearOnScroll.unobserve(entry.target);
-                }
-            })
-        },
-        
-        appearOptions);
-    
-        /* faders.forEach(fader => {
-            appearOnScroll.observe(fader);
-        }) */
-
         
 
-        const callbackFunction = (entries) => {
-            const [ entry ] = entries;
-            setIsVisible(entry.isIntersecting);
-        }
+    }, [] );
 
     return (
         <>
@@ -94,7 +78,6 @@ const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, dark
                                     {headline}
                                 </Heading>
                                 <Subtitle darkText={darkText} className="fade-in" ref={containerRef}>
-                                    {/* {isVisible ? description : "This didn't work"} */}
                                     {description}
                                 </Subtitle>
                                 <BtnWrap>
