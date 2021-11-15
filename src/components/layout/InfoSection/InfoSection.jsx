@@ -20,15 +20,22 @@ import {Button} from '../Button/Button.Styles';
 
 const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, darkText, description, buttonLabel, img, alt, primary, dark, dark2 } ) => {
 
-/* TODO: THis is all logic for making info appear on scroll: */
+/* This is all logic for making info appear on scroll: */
     /* const faders = document.querySelectorAll('.fade-in'); */
+    /* const sliders = document.querySelectorAll('.slide-in'); */
     /* const [ isVisible, setIsVisible ] = useState(false); */
     const containerRef = useRef(null);
+    const imgRef = useRef(null);
 
 /*  "Options" argument for intersection observer:*/
     const appearOptions = {
         threshold: 1,
-        rootMargin: "0px 0px -200px 0px"
+        rootMargin: "0px 0px -300px 0px"
+    };
+
+    const imgAppearOptions = {
+        threshold: .2,
+        rootMargin: "0px 0px -300px 0px"
     };
 
 /* Intersection Observer: */
@@ -37,6 +44,10 @@ const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, dark
     /* faders.forEach(fader => {
         appearOnScroll.observe(fader);
     }) */
+
+    /* sliders.forEach(slider => {
+        appearOnScroll.observe(slider);
+    }); */
     
 /* TODO: Need to figure out why the useEffect doesn't work properly with Intersection Observer */
     useEffect( () => {
@@ -63,6 +74,28 @@ const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, dark
         
 
     }, [] );
+
+    useEffect( () => {
+        const imgAppearOnScroll = new IntersectionObserver(
+            function ( entries, imgAppearOnScroll) {
+                entries.forEach( entry => {
+                    if(!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('appear');
+                    }
+                })
+            },
+
+            imgAppearOptions
+        )
+
+        if(imgRef.current) imgAppearOnScroll.observe(imgRef.current);
+
+        return () => {
+            if(imgRef.current) imgAppearOnScroll.unobserve(imgRef.current);
+        }
+    }, [])
 
     return (
         <>
@@ -99,7 +132,7 @@ const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, dark
                         </Column1>
                         <Column2>
                             <ImgWrap>
-                                <Img src={img} alt={alt} />
+                                <Img src={img} alt={alt} className="from-left slide-in" ref={imgRef}/>
                             </ImgWrap>
                         </Column2>
                     </InfoRow>
