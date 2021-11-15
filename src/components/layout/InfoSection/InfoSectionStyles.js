@@ -82,10 +82,10 @@ export const Subtitle = styled.p`
     font-size: 18px;
     line-height: 24px;
     color: ${ ( { darkText } ) => (darkText ? '#010606' : '#fff' ) };
-    animation-duration: 1s;
-    animation-name: slidein;
+    /* animation-duration: 1s;
+    animation-name: slidein; */
 
-    @keyframes slidein {
+    /* @keyframes slidein {
         from {
           margin-left: 100%;
           width: 300%;
@@ -95,7 +95,7 @@ export const Subtitle = styled.p`
           margin-left: 0%;
           width: 100%;
         }
-      }
+      } */
     
 `
 

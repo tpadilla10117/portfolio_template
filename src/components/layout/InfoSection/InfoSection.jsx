@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState, useRef} from 'react'
 import { 
     InfoContainer,
     InfoWrapper,
@@ -13,11 +13,65 @@ import {
     ImgWrap,
     Img
 } from './InfoSectionStyles';
+import './InfoSection.css';
 import {Button} from '../Button/Button.Styles';
 
 /* InfoSection receives data from seed.js : */
 
 const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, darkText, description, buttonLabel, img, alt, primary, dark, dark2 } ) => {
+
+/* TODO: THis is all logic for making info appear on scroll: */
+    const faders = document.querySelectorAll('.fade-in');
+    const [ isVisible, setIsVisible ] = useState(false);
+    const containerRef = useRef(null);
+
+/*  "Options" argument for intersection observer:*/
+    const appearOptions = {
+        threshold: 1,
+        rootMargin: "0px 0px -200px 0px"
+    };
+
+  /*   useEffect( () => {
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+            console.log("Fade fired")
+
+        })
+    }, []); */
+
+   /*  useEffect( () => {
+        const observer = new IntersectionObserver(callbackFunction, appearOptions);
+        if (containerRef.current) observer.observe(containerRef.current);
+
+        return () => {
+            if(containerRef.current) observer.unobserve(containerRef.current);
+        }
+    }, [containerRef, appearOptions]) */
+
+/* Intersection Observer: */
+ /*    const appearOnScroll = new IntersectionObserver(
+        function( entries, appearOnScroll) {
+            entries.forEach( entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('appear');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            })
+        },
+        
+        appearOptions);
+    
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        }) */
+
+        const callbackFunction = (entries) => {
+            const [ entry ] = entries;
+            setIsVisible(entry.isIntersecting);
+        }
+
     return (
         <>
             <InfoContainer id={id} lightBg={lightBg}>
@@ -31,7 +85,7 @@ const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, dark
                                 <Heading lightText={lightText}>
                                     {headline}
                                 </Heading>
-                                <Subtitle darkText={darkText} className="fade-in">
+                                <Subtitle darkText={darkText} className="fade-in" /* ref={containerRef} */>
                                     {description}
                                 </Subtitle>
                                 <BtnWrap>
