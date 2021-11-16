@@ -4,6 +4,8 @@
     import {
         ImageCardSectionWrapper,
         ImageCardSectionImgWrapper,
+        ImageCardSectionImgContainer,
+        ImageCardSectionPictureDescription,
         ImageCardSectionImg
 
     } from './ImageCardSection.js';
@@ -17,7 +19,13 @@
                     {carouselData.map( (picture, index) => {
                         return (
                             <ImageCardSectionImgWrapper key={index}>
-                                <ImageCardSectionImg src={picture.image} alt="images"/>
+                                <ImageCardSectionImgContainer>
+                                    <ImageCardSectionImg src={picture.image} alt="images"/>
+                                </ImageCardSectionImgContainer>
+
+                                <ImageCardSectionPictureDescription>
+
+                                </ImageCardSectionPictureDescription>
                             </ImageCardSectionImgWrapper>
                         )
                     })

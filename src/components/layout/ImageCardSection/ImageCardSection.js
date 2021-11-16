@@ -23,17 +23,24 @@ export const ImageCardSectionImgWrapper = styled.div`
     align-items: center;
     justify-content: center;
     /* background-color: blue; */
-    position: absolute;
-    
+    /* position: absolute; */
+`
+
+export const ImageCardSectionImgContainer = styled.div`
+
+`
+
+export const ImageCardSectionPictureDescription = styled.div`
+
 `
 
 export const ImageCardSectionImg = styled.img`
     display: flex;
     margin: 0 auto;
-    max-width: 100%;
-    /* width: 100%; */
+    max-width: 60%;
+    width: 100%;
     object-fit: cover;
-    height: 400px;
+    height: 500px;
     border-radius: 10px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 `
