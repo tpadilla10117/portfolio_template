@@ -25,16 +25,16 @@
                     {carouselData.map( (picture, index) => {
                         return (
                             <ImageCardSectionImgWrapper key={index}>
-                                <ImageCardSectionImgContainer>
+                                <ImageCardSectionImgContainer className="team-item-image">
                                     <ImageCardSectionImg src={picture.image} alt="images"/>
 
                                     <ImageCardSectionImgDetail>
                                         <ImgCardTitle>
-
+                                            This is the Title
                                         </ImgCardTitle>
 
                                         <ImgCardDescription>
-                                        
+                                            These are some details about the card
                                         </ImgCardDescription>
 
                                         <ImgCardSocialWrapper>

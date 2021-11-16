@@ -24,6 +24,25 @@ export const ImageCardSectionImgWrapper = styled.div`
     justify-content: center;
     /* background-color: blue; */
     /* position: absolute; */
+
+    :after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    }
+
+    /* :hover {
+            content: '';
+            background-color: red;
+        } */
+
+
 `
 
 export const ImageCardSectionImgContainer = styled.div`
@@ -32,15 +51,44 @@ export const ImageCardSectionImgContainer = styled.div`
 `
 
 export const ImageCardSectionImgDetail = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    padding: 20px 23px 55px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #777;
+    text-align: center;
+    background-size: cover;
+    transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
 
+    /* background-color: red; */
+
+    &:hover {
+        opacity: 1;
+        /* background-color: red; */
+    }
 `
 
 export const ImgCardTitle = styled.h4`
-
+    color: #111;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 1.3em;
+    line-height: 1.4;
+    font-size: 18px;
 `
 
 export const ImgCardDescription = styled.p`
-
+    margin: 0 0 2em 0;
 `
 
 export const ImgCardSocialWrapper = styled.div`
