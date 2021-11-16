@@ -8,6 +8,7 @@ export { default as InfoSection } from './layout/InfoSection/InfoSection.jsx';
 export { default as Services } from './layout/Services/Services.jsx';
 export { default as Footer } from './layout/Footer/Footer.jsx';
 export { default as Carousel } from './layout/Carousel/Carousel.jsx';
+export { default as ImageCardSection } from './layout/ImageCardSection/ImageCardSection.jsx';
 
 /* -------------------------------------------------------------------------- */
 
