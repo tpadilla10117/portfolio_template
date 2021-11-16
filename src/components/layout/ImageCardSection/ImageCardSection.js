@@ -27,10 +27,35 @@ export const ImageCardSectionImgWrapper = styled.div`
 `
 
 export const ImageCardSectionImgContainer = styled.div`
+    position: relative;
+    overflow: hidden;
+`
+
+export const ImageCardSectionImgDetail = styled.div`
+
+`
+
+export const ImgCardTitle = styled.h4`
+
+`
+
+export const ImgCardDescription = styled.p`
+
+`
+
+export const ImgCardSocialWrapper = styled.div`
 
 `
 
 export const ImageCardSectionPictureDescription = styled.div`
+
+`
+
+export const Name = styled.p`
+
+`
+
+export const TeamRole = styled.p`
 
 `
 

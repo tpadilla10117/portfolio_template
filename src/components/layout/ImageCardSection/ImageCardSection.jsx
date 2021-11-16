@@ -6,7 +6,13 @@
         ImageCardSectionImgWrapper,
         ImageCardSectionImgContainer,
         ImageCardSectionPictureDescription,
-        ImageCardSectionImg
+        Name,
+        TeamRole,
+        ImageCardSectionImg,
+        ImageCardSectionImgDetail,
+        ImgCardTitle,
+        ImgCardDescription,
+        ImgCardSocialWrapper
 
     } from './ImageCardSection.js';
 
@@ -21,10 +27,30 @@
                             <ImageCardSectionImgWrapper key={index}>
                                 <ImageCardSectionImgContainer>
                                     <ImageCardSectionImg src={picture.image} alt="images"/>
+
+                                    <ImageCardSectionImgDetail>
+                                        <ImgCardTitle>
+
+                                        </ImgCardTitle>
+
+                                        <ImgCardDescription>
+                                        
+                                        </ImgCardDescription>
+
+                                        <ImgCardSocialWrapper>
+                                        
+                                        </ImgCardSocialWrapper>
+                                    </ImageCardSectionImgDetail>
+
                                 </ImageCardSectionImgContainer>
 
                                 <ImageCardSectionPictureDescription>
+                                    <Name>
 
+                                    </Name>
+                                    <TeamRole>
+
+                                    </TeamRole>
                                 </ImageCardSectionPictureDescription>
                             </ImageCardSectionImgWrapper>
                         )
