@@ -18,7 +18,7 @@
     } from './ImageCardSection.js';
 
     import { carouselData } from '../../../utils/seed';
-    import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaYoutube } from 'react-icons/fa';
+    import { FaFacebook, FaTwitter, /* FaLinkedin, FaYoutube, FaInstagram */ } from 'react-icons/fa';
 
     const ImageCardSection = () => {
         return (
@@ -27,10 +27,10 @@
                     {carouselData.map( (picture, index) => {
                         return (
                             <ImageCardSectionImgWrapper key={index}>
-                                <ImageCardSectionImgContainer className="team-item-image">
+                                <ImageCardSectionImgContainer>
                                     <ImageCardSectionImg src={picture.image} alt="images"/>
 
-                                    <ImageCardSectionImgDetail className="team-otem-detail">
+                                    <ImageCardSectionImgDetail>
                                         <ImgCardTitle>
                                             This is the Title
                                         </ImgCardTitle>

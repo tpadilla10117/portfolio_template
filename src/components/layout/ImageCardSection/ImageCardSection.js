@@ -21,7 +21,6 @@ export const ImageCardSectionWrapper = styled.section`
     }
 
 `
-/* team-item */
 export const ImageCardSectionImgWrapper = styled.div`
     max-height: 50%;
     max-width: 100%;

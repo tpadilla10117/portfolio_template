@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from 'react'
+import React, {useEffect, useRef} from 'react'
 import { 
     InfoContainer,
     InfoWrapper,
@@ -68,12 +68,17 @@ const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, dark
 
         if (containerRef.current) appearOnScroll.observe(containerRef.current);
 
+       function cleanUp () {
+        if(containerRef.current) appearOnScroll.unobserve(containerRef.current);
+       };
+        
+
         return () => {
-            if(containerRef.current) appearOnScroll.unobserve(containerRef.current);
+            cleanUp();
         }
         
 
-    }, [] );
+    }, [appearOptions] );
 
     useEffect( () => {
         const imgAppearOnScroll = new IntersectionObserver(

@@ -27,7 +27,7 @@ const Carousel = ( {slides} ) => {
         return () => {
             clearTimeout(time);
         }
-    }, [current]);
+    }, [current, length]);
 
 /* If no data, or our array isn't an array, return null: */
     if(!Array.isArray(slides) || slides.length <= 0 ) {
