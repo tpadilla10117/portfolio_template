@@ -12,11 +12,13 @@
         ImageCardSectionImgDetail,
         ImgCardTitle,
         ImgCardDescription,
-        ImgCardSocialWrapper
+        ImgCardSocialWrapper,
+        SocialIconLink,
 
     } from './ImageCardSection.js';
 
     import { carouselData } from '../../../utils/seed';
+    import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaYoutube } from 'react-icons/fa';
 
     const ImageCardSection = () => {
         return (
@@ -38,8 +40,15 @@
                                         </ImgCardDescription>
 
                                         <ImgCardSocialWrapper>
-                                        
+                                            <SocialIconLink href="/" target="_blank" aria-label="Facebook">
+                                                <FaFacebook />
+                                            </SocialIconLink>
+                            
+                                            <SocialIconLink href="/" target="_blank" aria-label="Twitter">
+                                                <FaTwitter />
+                                            </SocialIconLink>
                                         </ImgCardSocialWrapper>
+
                                     </ImageCardSectionImgDetail>
 
                                 </ImageCardSectionImgContainer>

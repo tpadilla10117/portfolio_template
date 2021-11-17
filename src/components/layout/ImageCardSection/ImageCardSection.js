@@ -88,35 +88,13 @@ export const ImageCardSectionImgDetail = styled.div`
     /* background-color: red; */
 
     &:hover {
-        opacity: 1;
+        opacity: .9;
         transition-duration: .35s;
         background-color: rgba(255,255,255, .93);
 
         
     }
 `
-
-/* animation: fade 2s ease-in-out infinite alternate;
-} */
-
-/* @keyframes fade {
-    
-    50% {opacity: .50}
-    
-    100%{opacity: 1}
-} */
-
-/* .slide {
-    opacity: 0;
-    transition-duration: 1s ease;
-}
-
-.slide.active {
-    opacity: 1;
-    transition-duration: 1s;
-    transform: scale(1.08);
-}
- */
 export const ImgCardTitle = styled.h4`
     color: #111;
     font-weight: normal;
@@ -132,7 +110,63 @@ export const ImgCardDescription = styled.p`
 `
 
 export const ImgCardSocialWrapper = styled.div`
+    font-size: 14px;
+    cursor: pointer;
+    /* transition: 1s ease-in-out; */
+    /* transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000); */
+`
 
+/* export const SocialIcons = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+` */
+
+export const SocialIconLink = styled.a`
+    /* color: #fff; */
+    
+    font-size: 24px;
+    display: inline-block;
+    padding: 3px 7px;
+    color: rgba(0,0,0, .4);
+
+    &:hover {
+        color: #111;
+        /* transition: ease-in-out;
+        transition-duration: .4s; */
+        transition: color 500ms ease .15s;
+        /* animation-name: scale;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear; */
+        animation: fade 1.5s ease-in-out infinite alternate;
+        animation-delay: 450ms;
+        
+    }
+
+    @keyframes fade {
+    /* 25% {opacity: .25} */
+    50% {opacity: .50}
+    /* 75%{opacity: .75} */
+    100%{opacity: 1}
+    }
+   
+
+    /* @keyframes scale {
+                    0% {
+                        transform: scale(1.5);
+                    }
+                    25% {
+                        transform: scale(1.5);
+                    }
+                    75% {
+                        transform: scale(1.5);
+                    }
+                    100% {
+                        transform: scale(1.5);
+                    }
+                } */
 `
 
 export const ImageCardSectionPictureDescription = styled.div`
