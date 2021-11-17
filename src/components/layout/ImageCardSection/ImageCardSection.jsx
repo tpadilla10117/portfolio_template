@@ -28,7 +28,7 @@
                                 <ImageCardSectionImgContainer className="team-item-image">
                                     <ImageCardSectionImg src={picture.image} alt="images"/>
 
-                                    <ImageCardSectionImgDetail>
+                                    <ImageCardSectionImgDetail className="team-otem-detail">
                                         <ImgCardTitle>
                                             This is the Title
                                         </ImgCardTitle>

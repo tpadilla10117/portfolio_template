@@ -25,11 +25,19 @@ export const ImageCardSectionImgWrapper = styled.div`
     /* background-color: blue; */
     /* position: absolute; */
 
+
+    &:hover {
+        opacity: 1;
+    }
+
 `
 
 export const ImageCardSectionImgContainer = styled.div`
     position: relative;
     overflow: hidden;
+    /* opacity: 0; */
+
+    
         &:hover {
 
             &:after {
@@ -42,9 +50,8 @@ export const ImageCardSectionImgContainer = styled.div`
                 left: 0;
                 z-index: 1;
                 transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-    
-           
                 background: rgba(255,255,255, .93);
+                /* background: transparent; */
     
             }
 
@@ -52,6 +59,7 @@ export const ImageCardSectionImgContainer = styled.div`
 `
 
 export const ImageCardSectionImgDetail = styled.div`
+    opacity: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,6 +77,7 @@ export const ImageCardSectionImgDetail = styled.div`
     text-align: center;
     background-size: cover;
     transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+
 
     /* background-color: red; */
 
