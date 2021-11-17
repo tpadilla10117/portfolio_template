@@ -14,7 +14,7 @@ export const ImageCardSectionWrapper = styled.section`
     
 
 `
-
+/* team-item */
 export const ImageCardSectionImgWrapper = styled.div`
     max-height: 50%;
     max-width: 80%;
@@ -25,29 +25,30 @@ export const ImageCardSectionImgWrapper = styled.div`
     /* background-color: blue; */
     /* position: absolute; */
 
-    :after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-    }
-
-    /* :hover {
-            content: '';
-            background-color: red;
-        } */
-
-
 `
 
 export const ImageCardSectionImgContainer = styled.div`
     position: relative;
     overflow: hidden;
+        &:hover {
+
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    
+           
+                background: rgba(255,255,255, .93);
+    
+            }
+
+        }
 `
 
 export const ImageCardSectionImgDetail = styled.div`
