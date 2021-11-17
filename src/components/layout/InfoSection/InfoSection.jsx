@@ -78,7 +78,7 @@ const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, dark
         }
         
 
-    }, [appearOptions] );
+    }, [] );
 
     useEffect( () => {
         const imgAppearOnScroll = new IntersectionObserver(
@@ -97,9 +97,15 @@ const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, dark
 
         if(imgRef.current) imgAppearOnScroll.observe(imgRef.current);
 
-        return () => {
+        function cleanUp () {
             if(imgRef.current) imgAppearOnScroll.unobserve(imgRef.current);
+           };
+            
+    
+        return () => {
+            cleanUp();
         }
+
     }, [])
 
     return (
@@ -124,7 +130,7 @@ const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, dark
                                         smooth={true}
                                         duration={500}
                                         spy={true}
-                                        exact={true}
+                                        exact="true"
                                         offset={-80}
                                         primary={primary ? 1 : 0}
                                         dark={dark ? 1 : 0}
@@ -142,6 +148,9 @@ const InfoSection = ( {lightBg, id, imgStart, topLine, lightText, headline, dark
                         </Column2>
                     </InfoRow>
                 </InfoWrapper>
+
+                {/* <center><iframe title="sample"width="560" height="315" src="https://www.youtube.com/embed/mZxa3lrLhXM" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></center> */}
+            
             </InfoContainer>
         </>
     );
