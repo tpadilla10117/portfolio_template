@@ -17,9 +17,9 @@ export const ImageCardSectionWrapper = styled.section`
 /* team-item */
 export const ImageCardSectionImgWrapper = styled.div`
     max-height: 50%;
-    max-width: 80%;
+    max-width: 100%;
     height: 100%;
-    width: 80%;
+    width: 100%;
     align-items: center;
     justify-content: center;
     /* background-color: blue; */
@@ -35,9 +35,9 @@ export const ImageCardSectionImgWrapper = styled.div`
 export const ImageCardSectionImgContainer = styled.div`
     position: relative;
     overflow: hidden;
-    
-    /* opacity: 0; */
-
+    /* border: 2px solid; */
+    width: 60%;
+    background: red; /* TODO:This needs to be removed */
     
         &:hover {
             
@@ -52,7 +52,7 @@ export const ImageCardSectionImgContainer = styled.div`
                 left: 0;
                 z-index: 1;
                 transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-                background: rgba(255,255,255, .93);
+                /* background: rgba(255,255,255, .93); */
                 /* background: transparent; */
     
             }
@@ -67,6 +67,7 @@ export const ImageCardSectionImgDetail = styled.div`
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    /* max-width: 60%; */
     height: 100%;
     position: absolute;
     z-index: 2;
@@ -80,6 +81,7 @@ export const ImageCardSectionImgDetail = styled.div`
     background-size: cover;
     transition-duration: 1s ease-in;
     transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    /* border: 10px solid; */
     /* animation: fade 2s ease-in-out infinite alternate; */
 
 
@@ -87,8 +89,8 @@ export const ImageCardSectionImgDetail = styled.div`
 
     &:hover {
         opacity: 1;
-        transition-duration: .5s;
-        /* background-color: red; */
+        transition-duration: .35s;
+        background-color: rgba(255,255,255, .93);
 
         
     }
@@ -148,7 +150,7 @@ export const TeamRole = styled.p`
 export const ImageCardSectionImg = styled.img`
     display: flex;
     margin: 0 auto;
-    max-width: 60%;
+    max-width: 100%;
     width: 100%;
     object-fit: cover;
     height: 500px;
