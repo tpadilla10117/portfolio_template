@@ -35,10 +35,12 @@ export const ImageCardSectionImgWrapper = styled.div`
 export const ImageCardSectionImgContainer = styled.div`
     position: relative;
     overflow: hidden;
+    
     /* opacity: 0; */
 
     
         &:hover {
+            
 
             &:after {
                 content: '';
@@ -76,17 +78,43 @@ export const ImageCardSectionImgDetail = styled.div`
     color: #777;
     text-align: center;
     background-size: cover;
+    transition-duration: 1s ease-in;
     transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    /* animation: fade 2s ease-in-out infinite alternate; */
 
 
     /* background-color: red; */
 
     &:hover {
         opacity: 1;
+        transition-duration: .5s;
         /* background-color: red; */
+
+        
     }
 `
 
+/* animation: fade 2s ease-in-out infinite alternate;
+} */
+
+/* @keyframes fade {
+    
+    50% {opacity: .50}
+    
+    100%{opacity: 1}
+} */
+
+/* .slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+}
+ */
 export const ImgCardTitle = styled.h4`
     color: #111;
     font-weight: normal;
