@@ -12,6 +12,13 @@ export const ImageCardSectionWrapper = styled.section`
     /* align-items: center; */ /* this is making white space appear */
     background: #fff;
     
+    @media screen and (max-width: 768px) {
+        
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        
+    }
 
 `
 /* team-item */
@@ -20,6 +27,7 @@ export const ImageCardSectionImgWrapper = styled.div`
     max-width: 100%;
     height: 100%;
     width: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
     /* background-color: blue; */
@@ -29,6 +37,17 @@ export const ImageCardSectionImgWrapper = styled.div`
     &:hover {
         opacity: 1;
     }
+
+    /* TODO: Media query needs to go here: */
+
+    @media screen and (max-width: 768px) {
+       
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        
+    }
+
+   
 
 `
 
@@ -58,6 +77,12 @@ export const ImageCardSectionImgContainer = styled.div`
             }
 
         }
+
+        @media screen and (max-width: 768px) {
+            width: 90%;
+        
+        }
+        
 `
 
 export const ImageCardSectionImgDetail = styled.div`
